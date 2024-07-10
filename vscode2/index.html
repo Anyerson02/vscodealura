@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador y Desencriptador de Textos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="input-container">
+            <h1>Ingrese el texto aquí</h1>
+            <textarea id="text" rows="4" cols="50" oninput="updateMessage(this.value)"></textarea>
+            <select id="mode">
+                <option value="encrypt">Encriptar</option>
+                <option value="decrypt">Desencriptar</option>
+            </select>
+            <button onclick="processText()">Procesar</button>
+        </div>
+        <div class="output-container">
+            <img src="img/img.png.png" alt="No se encontró ningún mensaje">
+            <p id="message">Ningún mensaje fue encontrado</p>
+            <textarea id="result" rows="4" cols="50" readonly></textarea>
+            <button onclick="copyToClipboard()">Copiar</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
